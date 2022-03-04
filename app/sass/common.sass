@@ -1,0 +1,42 @@
+@import "colors.css"
+
+@mixin fontSize($value)
+    font-size: ($value/16+rem)
+
+html
+    font-size: 16px
+    
+body
+    font-family: 'Montserrat', sans-serif
+    background-color: #E5E5E5
+
+img
+    width: 100%
+    height: auto
+
+.figure
+    position: relative
+    width: 100%
+
+.btn
+    min-width: 200px
+    border: none
+    border-radius: 50px
+    cursor: pointer
+    font-weight: 800
+    font-family: inherit
+    &.white
+        background-color: var(--white)
+        color: var(--orange)
+        @include fontSize(20)
+        padding: 32px 36px
+    &.orange
+        background-color: var(--orange)
+        color: var(--white)
+        @include fontSize(26)
+        padding: 30px 43px
+
+.container
+    width: 98%
+    max-width: 1440px
+    margin: 0 auto
