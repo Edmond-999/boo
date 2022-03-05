@@ -1,1 +1,32 @@
 @import "colors.css"
+
+.header
+    padding: 40px 0 10px 0
+    z-index: 1
+    .nav-ul
+        justify-content: flex-end
+        gap: 24px
+        z-index: 1
+    .nav-li
+        display: flex
+        flex-direction: column
+        align-items: center
+        gap: 10px
+        &:hover
+            .underline
+                visibility: visible
+    .lang
+        &::after
+            content: ''
+            display: block
+            background-color: var(--blue)
+            border: 10px solid transparent
+            border-top: 10px solid var(--white)
+            margin: 6px 0 0 6px
+    .underline
+        width: 100px
+        visibility: hidden
+         
+ 
+        
+            
