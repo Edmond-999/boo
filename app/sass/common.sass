@@ -1,0 +1,65 @@
+@import "colors.css"
+
+@mixin fontSize($value)
+    font-size: ($value/16+rem)
+
+html
+    font-size: 16px
+    
+body
+    font-family: 'Montserrat', sans-serif
+    background-color: #E5E5E5
+
+img
+    width: 100%
+    height: auto
+
+.figure
+    position: relative
+    width: 100%
+
+.btn
+    min-width: 188px
+    border: none
+    border-radius: 50px
+    cursor: pointer
+    font-weight: 800
+    font-family: inherit
+    &.white
+        background-color: var(--white)
+        color: var(--orange)
+        @include fontSize(20)
+        padding: 32px 36px
+    &.orange
+        background-color: var(--orange)
+        color: var(--white)
+        @include fontSize(26)
+        padding: 30px 
+
+.d-flex
+    display: flex
+
+.ai-c
+    align-items: center
+
+.jc-c
+    justify-content: center
+
+.title
+    color: var(--blue)
+    font-size: 44px
+    font-weight: 900
+
+.container
+    width: 98%
+    max-width: 1310px
+    margin: 0 auto
+
+@media screen and ( max-width: 997px )
+    .container
+        padding: 0 30px
+    
+@media screen and ( max-width: 774px )
+    .container
+        padding: 0 20px
+    
