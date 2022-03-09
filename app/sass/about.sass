@@ -11,6 +11,7 @@
         height: 23px
     .content
         gap: 112px
+        margin-bottom: 38px
     .content-li
         max-width: 336px
     .content-title
@@ -18,3 +19,62 @@
     .content-descr
         line-height: 1.4
         opacity: 67%
+
+@media screen and ( max-width: 1280px )
+    .about
+        .content
+            gap: 50px
+
+@media screen and ( max-width: 992px )
+    .about
+        .content
+            gap: 30px
+        .top
+            margin-bottom: 40px
+        .title
+            font-size: 34px
+        .content-title
+            font-size: 20px
+            margin-bottom: 28px
+        .content-descr
+            font-size: 18px
+        .blue-line
+            height: 15px
+        
+@media screen and ( max-width: 768px )
+    .about
+        padding: 28px 0
+        .top
+            flex-direction: column
+            gap: 20px
+            align-items: flex-start
+            margin-bottom: 24px
+        .blue-line
+            max-width: 320px
+            height: 5px
+            transform: rotate(180deg)
+        .title
+            font-size: 28px
+        .content
+            flex-direction: column
+            gap: 38px
+        .content-title
+            font-size: 16px
+            margin-bottom: 12px
+        .content-descr
+            font-size: 14px
+            position: relative
+            &::after
+                content: ""
+                display: block
+                position: absolute
+                left: 0
+                bottom: -16px
+                width: 158px
+                height: 5px
+                background-image: url(..\images\src\orange-line.png)
+                background-repeat: no-repeat
+        .content-li
+            max-width: 100%
+    
+    
