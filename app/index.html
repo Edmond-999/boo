@@ -144,7 +144,37 @@
     /> -->
 
     <main>
-      <footer class="footer">
+      <section class="order bg-blue">
+        <div class="container d-flex">
+          <div class="content">
+            <img class="boo-img" src="images/src/white-boo.png" alt="Boo image">
+            <img class="boo-img-mobile" src="images/src/white-boo-mobile.png" alt="Boo image">
+            <img class="footprint" src="images/src/white-footprint.png" alt="Bird footprint">
+            <p class="content-p p-top fw900 fz80 c-white">ՈՒրախ</p>
+            <p class="content-p p-middle fw800 fz88 c-orange">ու</p>
+            <p class="content-p p-bottom fw900 fz60 c-yellow"> Հետաքրքիր </p>
+          </div>
+          <div class="place-order">
+            <form >
+              <h3 class="title c-yellow">Ձևակերպել պատվեր</h3>
+              <label class="label" for="name"><p class="input-p fz20 fw500 c-white">Անուն</p></label>
+              <input class="input" id="name" type="text">
+              <label class="label" for="age"><p class="input-p fz20 fw500 c-white">Տարիք</p></label>
+              <input class="input" id="age" type="number">
+              <label class="label" for="email"><p class="input-p fz20 fw500 c-white">Էլ․ հասցե</p></label>
+              <input class="input" id="email" type="email">
+              <label class="label" for="tel"><p class="input-p fz20 fw500 c-white">Հեռախոս</p></label>
+              <input type="tel" id="tel" class="input">
+            </form>
+            <div class="btn-wrapper">
+              <p class="btn-text-top fw600 fz14 c-white">Ստանալ Առաջարկ</p>
+              <button class="btn orange"><span class="btn-text-first">ՍՏԱՆԱԼ ԱՌԱՋԱՐԿ</span><span class="btn-text-second">ԱՅՍՏԵՂ</span></button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
         <div class="container">
           <img class="blue-line" src="images/src/footer-blue-line.png" alt="Blue line">
           <div class="content d-flex ai-c">
@@ -165,8 +195,7 @@
             <a class="logo" href="#"><img class="logo-img" src="images/src/footer-logo.png" alt="Logo"></a>
           </div>
         </div>
-      </footer>
-    </main>
+    </footer>
     <script src="js/jquery.min.js"></script>
     <script src="js/app.min.js"></script>
   </body>
