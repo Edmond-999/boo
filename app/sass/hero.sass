@@ -14,8 +14,8 @@
         gap: 200px
         
     .hero-bg
-        position: absolute
-        top: -80px
+        position: fixed
+        top: 0
         left: 0
     .main-logo
         width: 40%
@@ -32,7 +32,7 @@
         .c-yellow
             transform: matrix(0.99, 0.1, -0.1, 0.99, 0, 0)
         .c-orange
-            transform: matrix(0.97, -0.22, 0.23, 0.97, 0, 0)   
+            transform: matrix(0.97, -0.22, 0.23, 0.97, 0, 0)
         .btn
             margin-left: auto
     .white-line
@@ -44,4 +44,36 @@
     .hero
         .container
             gap: 100px
-        
+
+@media screen and ( max-width: 992px )
+    .hero
+        padding: 48px 0 
+        .c-white, .c-orange
+            font-size: 36px
+        .c-yellow
+            font-size: 44px
+
+@media screen and ( max-width: 768px )
+    .hero
+        padding: 0 0 40px 0
+        .container
+            flex-direction: column
+            gap: 0
+        .main-logo
+            width: 100%
+        .btn,.orange
+            display: none
+        .content
+            margin-left: auto
+            margin-top: -50px
+        .white-line
+            display: none
+
+@media screen and ( max-width: 667px )
+    .hero
+        .c-white, .c-orange
+            font-size: 24px
+        .c-yellow
+            font-size: 32px
+        .content
+            margin-top: -30px
