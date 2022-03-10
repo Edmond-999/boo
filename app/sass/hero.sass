@@ -1,5 +1,8 @@
 @import 'colors.css'
 
+@mixin fontSize($value)
+    font-size: ($value/16+rem)
+
 .hero
     padding: 48px 0 150px 0
     position: relative
@@ -49,9 +52,9 @@
     .hero
         padding: 48px 0 
         .c-white, .c-orange
-            font-size: 36px
+            @include fontSize(36)
         .c-yellow
-            font-size: 44px
+            @include fontSize(44)
 
 @media screen and ( max-width: 768px )
     .hero
@@ -72,8 +75,8 @@
 @media screen and ( max-width: 667px )
     .hero
         .c-white, .c-orange
-            font-size: 24px
+            @include fontSize(24)
         .c-yellow
-            font-size: 32px
+            @include fontSize(32)
         .content
             margin-top: -30px
