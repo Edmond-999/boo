@@ -1,8 +1,9 @@
 body
     .surprise
         padding: 217px 0 85px 0
-        background-image: url(../images/src/surprise-img.png)
+        background-image: url(../images/src/surprise-bg.png)
         background-repeat: no-repeat
+        background-size: cover
         .content
             text-align: right
         .surprise-title-top
@@ -15,6 +16,105 @@ body
             margin-left: 18px
         .btn
             margin-top: 65px
+    .topics
+        padding: 53px 0 88px 0   
+        .title-img-wrapper
+            justify-content: space-between
+            margin-bottom: 163px
+        .blue-line
+            max-width: 640px
+            max-height: 23px
+            margin-top: 34px
+        .content
+            flex-wrap: wrap
+            gap: 25px
+            justify-content: space-between
+        .box
+            width: 40%
+            border-radius: 24px
+            padding: 44px
+            position: relative
+        .first
+            max-width: 534px
+            margin-left: 110px
+            margin-top: 94px
+            padding-bottom: 124px
+        .second
+            max-width: 420px
+            margin-right: 224px
+            margin-bottom: auto
+            padding-bottom: 59px
+        .thirth
+            order: 2
+            max-width: 644px
+            flex-grow: 1
+            padding-bottom: 230px
+            margin-top: -90px
+        .fourth
+            order: 1
+            opacity: 70%
+            max-width: 644px
+            padding-bottom: 82px
+            flex-grow: 1
+            margin-top: auto
+            margin-bottom: auto
+        .fifth
+            order: 3
+            max-width: 448px
+            margin-left: 193px
+            padding-bottom: 84px
+        .sixth
+            order: 4
+            margin: auto 0 0 auto
+            padding-bottom: 0   
+        .first, .thirth, .fifth
+            text-align: right
+        .content-title
+            margin-bottom: 40px
+        .content-p
+            line-height: 1.5
+        .content-p-1, .content-p-3, .content-p-5
+            max-width: 300px
+            margin: 0 0 0 auto
+        .content-p-2
+            max-width: 260px
+        .content-p-4
+            max-width: 335px
+        .box-img
+            max-width: 226px
+            position: absolute
+        .first-img
+            top: 178px
+            left: -134px
+        .second-img
+            top: 167px
+            right: -128px
+        .thirth-img
+            right: 190px
+            bottom: -119px
+        .fourth-img
+            right: -103px
+            top: 78px
+        .fifth-img
+            left: -136px
+            top: 196px
+        .number
+            position: absolute
+        .one
+            left: 59px
+            top: -70px
+        .two
+            right: 31px
+            top: -100px
+        .three
+            left: 76px
+            top: -90px
+        .four
+            left: 45px
+            bottom: -80px
+        .five
+            right: 71px
+            bottom: -70px
     .order
         padding: 55px 0
         position: relative
@@ -74,6 +174,7 @@ body
         .btn
             @include fontSize(20)
         .accept
+            display: none
             position: absolute
             top: 50%
             left: 50%
@@ -83,6 +184,8 @@ body
             width: 100%
             max-width: 646px
             text-align: center
+            .submited
+                display: block
         .accept-p
             line-height: 1.5
         .accept-img
@@ -237,7 +340,6 @@ body
     body
         .surprise
             padding: 42px 0 28px 0
-            background-size: contain
             .surprise-title-top,.surprise-title-bottom
                 @include fontSize(28)
             .surprise-text, .span
