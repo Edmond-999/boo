@@ -181,7 +181,7 @@
               <p class="content-p content-p-3 fw500 fz24 c-white">Ձեռքի աշխատանք՝ երեխայի ստեղծագործական մտքի զարգացման համար։</p>
               <img class="box-img thirth-img" src="images/src/third.png" alt="Rainbow image">
             </div>
-            <div class="fourth box bg-blue">
+            <div class="fourth box">
               <p class="number four fw400 fz160 c-orange">4</p>
               <h4 class="content-title fw700 fz28 c-white">Զվարճանք</h4>
               <p class="content-p content-p-4 fw500 fz24 c-white">Ուզում ենք ձեր երեխների համար ստեղծել ուրախանալու ու զվարճանալու ևս մեկ առիթ։</p>
@@ -200,10 +200,10 @@
         </div>
       </section>
       <section class="order bg-blue">
+        <img class="boo-img" src="images/src/white-boo.png" alt="Boo image">
+        <img class="boo-img-mobile" src="images/src/white-boo-mobile.png" alt="Boo image">
         <div class="container d-flex">
           <div class="content">
-            <img class="boo-img" src="images/src/white-boo.png" alt="Boo image">
-            <img class="boo-img-mobile" src="images/src/white-boo-mobile.png" alt="Boo image">
             <img class="footprint" src="images/src/white-footprint.png" alt="Bird footprint">
             <p class="content-p p-top fw900 fz80 c-white">ՈՒրախ</p>
             <p class="content-p p-middle fw800 fz88 c-orange">ու</p>
@@ -215,7 +215,7 @@
               <label class="label" for="name"><p class="input-p fz20 fw500 c-white">Անուն</p></label>
               <input class="input" id="name" type="text">
               <label class="label" for="age"><p class="input-p fz20 fw500 c-white">Տարիք</p></label>
-              <input class="input input-short" id="age" type="number">
+              <input class="input input-short" id="age" type="text">
               <label class="label" for="email"><p class="input-p fz20 fw500 c-white">Էլ․ հասցե</p></label>
               <input class="input" id="email" type="email">
               <label class="label" for="tel"><p class="input-p fz20 fw500 c-white">Հեռախոս</p></label>
@@ -226,10 +226,12 @@
               <button class="btn orange submit"><span class="btn-text-first">ՍՏԱՆԱԼ ԱՌԱՋԱՐԿ</span><span class="btn-text-second">ԱՅՍՏԵՂ</span></button>
             </div>
           </div>
-          <div class="accept bg-white">
-            <p class="accept-p fw500 fz24 c-blue">Ձեր հայտը ընդունված է, մենք շուտով կկապվենք Ձեզ հետ:</p>
-            <img class="accept-img" src="images/src/ok-icon.png" alt="ok icon">
-          </div> 
+          <div class="modal-backdrop">
+            <div class="accept bg-white">
+              <p class="accept-p fw500 fz24 c-blue">Ձեր հայտը ընդունված է, մենք շուտով կկապվենք Ձեզ հետ:</p>
+              <img class="accept-img" src="images/src/ok-icon.png" alt="ok icon">
+            </div> 
+          </div>
         </div>
       </section>
     </main>
@@ -256,6 +258,6 @@
         </div>
     </footer>
     <script src="js/jquery.min.js"></script>
-    <script src="js/app.min.js"></script>
+    <script src="js/app.js"></script>
   </body>
 </html>
