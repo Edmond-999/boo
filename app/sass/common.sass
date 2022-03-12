@@ -7,8 +7,7 @@ html
     font-size: 16px
     
 body
-    font-family: 'Montserrat', sans-serif
-    background-color: #E5E5E5
+    font-family: 'Montserrat', sans-serif   
 
 img
     width: 100%
@@ -25,6 +24,9 @@ img
     cursor: pointer
     font-weight: 800
     font-family: inherit
+    &:hover, &.active
+        opacity: 0.8
+        
     &.white
         background-color: var(--white)
         color: var(--orange)
@@ -46,13 +48,16 @@ img
 .jc-c
     justify-content: center
 
+.row-rev
+    flex-direction: row-reverse
+
 .title
     color: var(--blue)
     font-size: 44px
     font-weight: 900
 
 .container
-    width: 98%
+    width: 95%
     max-width: 1310px
     margin: 0 auto
 
