@@ -13,7 +13,6 @@
         top: 0
         right: 0
         background-image: linear-gradient(to right, rgba(255,0,0,0), rgba(255,255,255,1))
-
     .content
         text-align: right
         position: relative
@@ -28,106 +27,6 @@
         margin-left: 18px
     .btn
         margin-top: 65px
-.topics
-    padding: 53px 0 88px 0   
-    overflow: hidden
-    .title-img-wrapper
-        justify-content: space-between
-        margin-bottom: 163px
-    .blue-line
-        max-width: 640px
-        max-height: 23px
-        margin-top: 34px
-    .content
-        flex-wrap: wrap
-        gap: 25px
-        justify-content: space-between
-    .box
-        width: 40%
-        border-radius: 24px
-        padding: 44px
-        position: relative
-    .first
-        max-width: 534px
-        margin-left: 110px
-        margin-top: 94px
-        padding-bottom: 124px
-    .second
-        max-width: 420px
-        margin-right: 224px
-        margin-bottom: auto
-        padding-bottom: 59px
-    .thirth
-        order: 2
-        max-width: 644px
-        flex-grow: 1
-        padding-bottom: 230px
-        margin-top: -90px
-    .fourth
-        order: 1
-        background: rgba(#45babc, 0.7)
-        max-width: 644px
-        padding-bottom: 82px
-        flex-grow: 1
-        margin-bottom: auto
-    .fifth
-        order: 3
-        max-width: 448px
-        margin-left: 193px
-        margin-top: -60px
-        padding-bottom: 84px
-    .sixth
-        order: 4
-        margin: auto 0 0 auto
-        padding-bottom: 0   
-    .first, .thirth, .fifth
-        text-align: right
-    .content-title
-        margin-bottom: 40px
-    .content-p
-        line-height: 1.5
-    .content-p-1, .content-p-3, .content-p-5
-        max-width: 300px
-        margin: 0 0 0 auto
-    .content-p-2
-        max-width: 260px
-    .content-p-4
-        max-width: 335px
-    .box-img
-        max-width: 226px
-        position: absolute
-    .first-img
-        top: 178px
-        left: -134px
-    .second-img
-        top: 167px
-        right: -128px
-    .thirth-img
-        right: 190px
-        bottom: -119px
-    .fourth-img
-        right: -103px
-        top: 78px
-    .fifth-img
-        left: -136px
-        top: 196px
-    .number
-        position: absolute
-    .one
-        left: 59px
-        top: -70px
-    .two
-        right: 31px
-        top: -100px
-    .three
-        left: 76px
-        top: -90px
-    .four
-        left: 45px
-        bottom: -80px
-    .five
-        right: 71px
-        bottom: -70px
 .order
     padding: 55px 0
     position: relative
@@ -170,7 +69,7 @@
         border-radius: 50px
         border: none
         @include fontSize(16)
-        padding: 10px
+        padding: 10px 20px
         font-family: inherit
         &.input-short
             width: 56%
@@ -344,6 +243,8 @@
             display: flex
             justify-content: space-between
             order: 2
+        .phone
+            margin-bottom: 0
         .icons
             order: 3
             justify-content: space-between
@@ -351,6 +252,10 @@
         .logo
             order: 1 
             margin: 0 auto
+        .insta-link
+            order: 2
+        .insta-link
+            order: 1
                
 
 @media screen and ( max-width: 768px )                
@@ -424,7 +329,9 @@
             max-width: 60px
             margin-top: 20px
     .footer
-        padding: 28px 0 50px 0    
+        padding: 28px 0 50px 0 
+        .blue-line
+            transform: scaleX(-1)   
         .content
             gap: 18px  
         .icons
