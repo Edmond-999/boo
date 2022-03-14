@@ -1,0 +1,96 @@
+.footer
+    padding: 58px 0 
+    .blue-line
+        max-width: 1440px
+        margin-bottom: 216px
+    .content
+        justify-content: space-between
+    .phone, .mail
+        gap: 24px
+    .phone
+        margin-bottom: 19px
+    .phone-icon-img, .mail-icon-img
+        max-width: 32px
+        max-height: 32px
+        object-fit: contain
+    .icons
+        gap: 58px
+    .insta-img, .face-img
+        max-width: 67px
+        max-height: 67px
+    .logo-img
+        max-width: 305px
+
+@media screen and ( max-width: 1280px )
+    .footer
+        .phone, .mail
+            gap: 15px
+        .phone-icon-img, .mail-icon-img
+            max-width: 26px
+            max-height: 26px
+        .icons
+            gap: 35px
+        .phone-number, .email-address
+            @include fontSize(26)
+        .insta-img, .face-img
+            max-width: 50px
+            max-height: 50px
+        .logo-img
+            max-width: 250px
+
+@media screen and ( max-width: 992px )
+    .footer
+        .blue-line
+            margin-bottom: 55px
+        .content
+            flex-direction: column
+            align-items: initial
+            gap: 30px
+        .contact
+            display: flex
+            justify-content: space-between
+            order: 2
+        .phone
+            margin-bottom: 0
+        .icons
+            order: 3
+            justify-content: space-between
+            padding: 0 110px
+        .logo
+            order: 1 
+            margin: 0 auto
+        .insta-link
+            order: 2
+        .insta-link
+            order: 1
+               
+
+@media screen and ( max-width: 768px )
+    .footer
+        padding: 28px 0 50px 0 
+        .blue-line
+            transform: scaleX(-1)   
+        .content
+            gap: 18px  
+        .icons
+            padding: 0 55px  
+        .logo
+            max-width: 150px 
+        .phone, .mail
+            gap: 4px 
+        .phone-icon-img, .mail-icon-img
+            max-width: 16px
+            max-height: 16px   
+        .phone-number, .email-address
+            @include fontSize(14)  
+        .insta-img, .face-img
+            max-width: 28px
+            max-height: 28px
+
+@media screen and ( max-width: 340px )
+    .footer
+        .phone-icon-img, .mail-icon-img
+            max-width: 14px
+            max-height: 14px 
+        .phone-number, .email-address
+            @include fontSize(12)  
