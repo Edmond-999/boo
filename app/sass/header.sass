@@ -1,5 +1,9 @@
 @import "colors.css"
 
+@mixin fontSize($value)
+    font-size: ($value/16+rem)
+
+
 .header
     padding: 20px 0 
     z-index: 1
@@ -108,11 +112,11 @@
         .nav-ul
             gap: 15px
         .nav-link
-            font-size: 16px
+            @include fontSize(20)
         .underline
             width: 60px
         .lang
-            font-size: 18px
+            @include fontSize(20)
             &::after
                 margin-top: 4px
 
@@ -121,6 +125,8 @@
         padding: 20px 0 
         .nav
             align-items: flex-start
+        .nav-link
+            @include fontSize(16)
         .nav-ul
             display: none
         .burger
