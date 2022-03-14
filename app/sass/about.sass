@@ -1,70 +1,343 @@
-@import "colors.css"
+@import 'colors.css'
 
-.about
-    padding: 58px 0 38px 0
+@mixin fontSize($value)
+    font-size: ($value/16+rem)
+
+.about-boo
+    padding: 53px 0 110px 0
+    position: relative
+    .foot-print-1
+        position: absolute
+        width: 50%
+        left: 0
+        top: 10%
+    .foot-print-2-3
+        position: absolute
+        width: 24%
+        left: 49%
+        top: 10%
+        z-index: 2
+    .foot-print-title
+        display: none
     .top
-        justify-content: space-between
         align-items: flex-end
-        margin-bottom: 53px
+        justify-content: space-between
+        margin-bottom: 120px
+    .row
+        display: flex
+        justify-content: center
+        gap: 24px
+    .column
+        width: 50%
+        display: flex
+        flex-direction: column
+        gap: 27px
+    .column-1
+        margin-top: 100px
+    .card
+        position: relative
+        border-radius: 24px
+    .card-title
+        margin-bottom: 40px
+    .card-descr
+        line-height: 1.3
+    .card-number
+        width: 90px
+        position: absolute
+    .card-icon
+        z-index: 1
+        width: 226px
+        position: absolute
         
-    .content
-        gap: 112px
-        margin-bottom: 38px
-    .content-li
-        max-width: 336px
-    .content-title
-        margin-bottom: 32px
-    .content-descr
-        line-height: 1.4
-        opacity: 67%
-
-@media screen and ( max-width: 1280px )
-    .about
+    .card-1
+        max-width: 535px
+        padding: 44px 44px 124px 44px
+        margin-left: auto
+        width: 100%
+        background: rgba(196, 196, 196, 0.5)
         .content
-            gap: 50px
+            max-width: 305px
+            text-align: end
+            margin-left: auto
+        .card-number-1
+            width: 40px
+            top: -23%
+            left: 60px
+            transform: translateY(50%)
+        .card-icon-1
+            left: -40%
+            top: 40%
+            transform: translateX(50%)
+    .card-4
+        max-width: 644px
+        padding: 44px 44px 100px 44px
+        background: rgba(#45BABC, 0.7)
+    
+        .content
+            max-width: 335px
+            text-align: start
+        .card-number-4
+            width: 90px
+            bottom: -15%
+        .card-icon-4
+            left: 80%
+            top: 50%
+            transform: translateY(-50%)
+    
+    .card-5
+        max-width: 448px
+        padding: 44px 44px 100px 44px
+        margin-left: auto
+        width: 100%
+        .content
+            max-width: 298px
+            text-align: end
+            margin-left: auto
+        .card-number-5
+            left: 70%
+            bottom: -15%
+        .card-icon-5
+            right: 75%
+            bottom: 10%
+
+    .card-2
+        padding: 44px 44px 70px 44px
+        max-width: 420px
+        .content
+            max-width: 257px
+        .card-number-2
+            top: -15%
+            left: 70%
+        .card-icon-2
+            left: 75%
+            bottom: 10%
+        
+    .card-3
+        padding: 44px 44px 240px 44px
+        max-width: 644px
+        .content
+            max-width: 306px
+            text-align: end
+            margin-left: auto
+        .card-number-3
+            top: -18%
+        .card-icon-3
+            left: 50%
+            bottom: -24%
+            transform: translateX(-50%)
+    .card-6
+        margin: auto 0 0 auto
+    
+    .row-mobile
+        display: none
+
+    
+@media screen and ( max-width: 1250px )
+    .about-boo
+        .foot-print-2-3
+            width: 26%
+            left: 57%
+        .card-icon
+            width: 150px
+        .card
+            max-width: 535px
+        .card-1
+            .card-icon-1
+                left: -25%
+        .card-4
+            margin-left: auto
+            width: 100%
+            z-index: 1
+            path
+                fill: #FBD00C
+            .card-icon-4
+                left: 86%
+        .card-3
+            .card-icon-3
+                bottom: -15%
+        .card-number
+            width: 80px
+        
 
 @media screen and ( max-width: 992px )
-    .about
-        .content
-            gap: 30px
-        .top
-            margin-bottom: 40px
-        .content-title
-            font-size: 20px
-            margin-bottom: 28px
-        .content-descr
-            font-size: 18px
-        
-@media screen and ( max-width: 768px )
-    .about
-        padding: 28px 0
-        .top
+    .about-boo
+        .foot-print-1, .foot-print-2-3
+            display: none
+        //es pah@ petqa nayel
+        .foot-print-title
+            display: block
+            position: absolute
+            width: 20%
+        .row
+            display: none
+        .row-mobile
+            display: block
+        .column-mobile
+            display: flex
             flex-direction: column
-            gap: 20px
-            align-items: flex-start
-            margin-bottom: 24px
-        .title
-            font-size: 28px
-        .content
-            flex-direction: column
-            gap: 38px
-        .content-title
-            font-size: 16px
-            margin-bottom: 12px
-        .content-descr
-            font-size: 14px
-            position: relative
-            &::after
-                content: ""
-                display: block
+            gap: 15px
+            
+            .card-number-2
+                top: 5%
+                left: 103%
+            .card-icon-2
+                left: 82%
+            .foot-print-2
                 position: absolute
+                width: 28%
+                left: 55%
+                top: 0
+            .card-3
+                margin-left: auto
+                width: 100%
+                max-width: 500px
+                padding: 44px 44px 120px 44px
+                .card-title, .card-descr
+                    color: var(--orange)
+            .card-number-3
+                top: 8%
+            .card-icon-3
+                left: 0%
+                bottom: 2%
+            .card-4
+                margin-left: 0
+            .card-number-4
+                left: 103%
+                top: 4%
+            .card-icon-4
+                top: 65%
+            .foot-print-4-top
+                position: absolute
+                width: 50%
+                top: -30%
+                left: 63%
+            .foot-print-4-bottom
+                position: absolute
+                width: 33%
+                left: 0px
+                top: 80%
+            .card-number-5
+                left: -20%
+                bottom: -9%
+            .card-icon-5
+                right: 83%
+                bottom: 33%
+            .card-6
+                margin: 0 auto
+                padding-top: 70px
+            .foot-print-5
+                position: absolute
+                width: 20%
+                bottom: 0
                 left: 0
-                bottom: -16px
-                width: 158px
-                height: 5px
-                background-image: url(..\images\src\orange-line.png)
-                background-repeat: no-repeat
-        .content-li
-            max-width: 100%
+
+
+
+@media screen and ( max-width: 768px )
+    .about-boo
+        padding: 28px 0 58px 0
+        .top
+            flex-direction: column-reverse
+            gap: 31px
+            align-items: flex-start
+            margin-bottom: 50px
+            .blue-line
+                margin-left: auto
+                transform: rotate(0deg)
+                width: 100%
+                max-width: 100%
+        
     
+
     
+@media screen and ( max-width: 667px )
+    .about-boo
+        .card-title
+            @include fontSize(16)
+            margin-bottom: 20px
+        .card-descr 
+            @include fontSize(14)
+        .card-icon
+            width: 108px
+        .card
+            width: 80%
+            padding: 28px 28px 33px 28px
+            .card-number
+                width: 45px
+                &.card-number-1
+                    width: 30px
+                    top: -67%
+                    left: 13%   
+            .card-icon-1
+                left: -22%
+                top: 15%
+            .card-number-2
+                top: -10%
+                left: 106%
+            .card-number-3
+                top: -5%
+                left: 8%
+            .card-icon-3
+                left: 5%
+                bottom: 1%
+            .card-number-4
+                top: -14%
+                left: 107%
+            .foot-print-4-top
+                width: 40%
+            .foot-print-4-bottom
+                width: 23%
+            .card-number-5
+                left: -24%
+                bottom: -13%
+    
+@media screen and ( max-width: 520px )
+    .about-boo
+        .column-mobile
+            .card
+                width: 100%
+            .card-1
+                max-width: 254px
+                .card-number
+                    &.card-number-1
+                        width: 30px
+                        top: -47%
+                        left: 13%
+                .card-icon-1
+                    left: -40%
+                    top: 25%
+                .content
+                    max-width: 147px
+            .card-2
+                max-width: 242px
+                .content
+                    max-width: 135px
+                .card-number-2
+                    top: -3%
+            .foot-print-2
+                    width: 33%
+                    left: 58%
+            .card-3
+                max-width: 278px
+                padding: 28px 28px 60px 28px
+                .content
+                    max-width: 175px
+            .card-4
+                max-width: 240px
+                .content
+                    max-width: 181px
+            .foot-print-4-bottom
+                    width: 30%
+                    left: -8%
+                    top: 80%
+            .card-5
+                max-width: 244px
+                .content
+                    max-width: 162px
+            .card-6
+                padding-top: 32px
+                .question
+                    @include fontSize(28)
+                
+
+            
