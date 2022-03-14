@@ -1,30 +1,38 @@
 @import 'colors.css'
 
+@mixin fontSize($value)
+    font-size: ($value/16+rem)
+
 .hero
     padding: 48px 0 150px 0
     position: relative
     
     .bg-image
         position: absolute
-        bottom: 0
+        top: -10%
         left: 0
+    .foot-print-hero-mobile
+        display: none
     .container
         justify-content: flex-end
+        align-items: center
         gap: 200px
+        
     .hero-bg
-        position: absolute
-        top: -80px
+        position: fixed
+        top: 0
         left: 0
-    .figure-container
-        width: 38.7%
-        margin-left: 30px
-    .figure
-        padding-top: 53%
+    .main-logo
+        width: 40%
     .content
         text-align: center
         display: flex
         flex-direction: column
-        justify-content: space-between
+        justify-content: center
+        gap: 20px
+        .title-wrapper
+            flex-direction: column
+            grid-gap: 20px
         p
             text-shadow: 0px 2px 12px rgba(0, 0, 0, 0.25)
         .c-white
@@ -32,10 +40,79 @@
         .c-yellow
             transform: matrix(0.99, 0.1, -0.1, 0.99, 0, 0)
         .c-orange
-            transform: matrix(0.97, -0.22, 0.23, 0.97, 0, 0)   
+            transform: matrix(0.97, -0.22, 0.23, 0.97, 0, 0)
         .btn
             margin-left: auto
+            position: initial
+            z-index: 1
+            
     .white-line
         position: absolute
         bottom: 0
         right: 65px
+
+@media screen and ( max-width: 1124px )
+    .hero
+        padding-bottom: 80px
+        .bg-image
+            top: 0
+        .container
+            gap: 100px
+
+@media screen and ( max-width: 992px )
+    .hero
+        padding: 48px 0 
+        .c-white, .c-orange
+            @include fontSize(36)
+        .c-yellow
+            @include fontSize(44)
+
+@media screen and ( max-width: 768px )
+    .hero
+        padding: 0 0 160px 0
+        .bg-image
+            display: none
+        .foot-print-hero-mobile
+            display: block
+            position: absolute
+            bottom: -20%
+            left: 0
+        .container
+            flex-direction: column
+            gap: 0
+        .main-logo
+            width: 90%
+            margin-right: auto
+        .btn,.orange
+            display: none
+        .content
+            margin-left: auto
+            margin-top: -50px
+            .title-wrapper
+                flex-direction: row
+                justify-content: flex-end
+                grid-gap: 20px
+            .c-yellow
+                transform: rotate(0deg)
+            .c-orange
+                transform: rotate(0)
+        .white-line
+            display: none
+
+@media screen and ( max-width: 667px )
+    .hero
+        .content
+            margin-top: -30px
+            gap: 10px
+            .title-wrapper
+                gap: 10px
+    
+@media screen and ( max-width: 520px )
+    .hero
+        padding-bottom: 100px
+        .c-white, .c-orange
+            @include fontSize(24)
+        .c-yellow
+            @include fontSize(32)
+    
+            
