@@ -1,7 +1,11 @@
 @import "colors.css"
 
+@mixin fontSize($value)
+    font-size: ($value/16+rem)
+
+
 .header
-    padding: 40px 0 10px 0
+    padding: 20px 0 
     z-index: 1
     .nav
         justify-content: flex-end
@@ -9,32 +13,61 @@
         justify-content: flex-end
         gap: 24px
         z-index: 1
-        transition: all 1000ms
+        margin-right: 24px
+        transition: linear 300ms
         &.mobile
-            display: block
+            display: flex
+            gap: 35px
             right: -200px
             flex-direction: column
+            align-items: flex-start
             position: absolute
             background-color: var(--white)
-            padding: 24px 32px 14px 32px
+            padding: 24px 24px 31px 24px 
             border-radius: 20px
-            top: 53px
+            top: 64px
+            right: -4px
+            opacity: 1
             .nav-link
                 color: var(--blue)
             .nav-li
                 align-items: flex-start
                 gap: 16px
+                &::after
+                    content: ""
+                    display: block
+                    position: absolute
+                    right: 0
+                    bottom: -14px
+                    width: 95px
+                    height: 4px
+                    background-image: url(..\images\src\blue-line-mobile.png)
+                    background-repeat: no-repeat
+                    opacity: 0
+                    transition: all 200ms
+                &:hover, .active
+                    &::after
+                        opacity: 1
             .FAQ
                 display: none
 
     .nav-li
-        display: flex
-        flex-direction: column
-        align-items: center
-        gap: 10px
+        position: relative
+        &::after
+            content: ""
+            display: block
+            position: absolute
+            right: 0
+            bottom: -20px
+            width: 124px
+            height: 6px
+            background-image: url(..\images\src\white-underline.png)
+            background-repeat: no-repeat
+            opacity: 0
+            transition: all 200ms
         &:hover, .active
-            .underline
-                visibility: visible
+            &::after
+                opacity: 1
     .lang
         cursor: pointer
         &::after
@@ -74,28 +107,28 @@
                 transform: rotate(-45deg)
                 margin-top: -6px
  
-@media screen and ( max-width: 997px )
+@media screen and ( max-width: 992px )
     .header
         .nav-ul
             gap: 15px
         .nav-link
-            font-size: 18px
+            @include fontSize(20)
         .underline
             width: 60px
         .lang
-            font-size: 18px
+            @include fontSize(20)
             &::after
                 margin-top: 4px
 
-@media screen and ( max-width: 774px )
+@media screen and ( max-width: 768px )
     .header
-        padding: 20px 0 10px 0
+        padding: 20px 0 
         .nav
             align-items: flex-start
+        .nav-link
+            @include fontSize(16)
         .nav-ul
             display: none
-            &.mobile
-                right: 20px
         .burger
             display: block
         .lang
