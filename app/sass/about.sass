@@ -163,11 +163,6 @@
     .about-boo
         .foot-print-1, .foot-print-2-3
             display: none
-        //es pah@ petqa nayel
-        .foot-print-title
-            display: block
-            position: absolute
-            width: 20%
         .row
             display: none
         .row-mobile
@@ -241,6 +236,7 @@
             gap: 31px
             align-items: flex-start
             margin-bottom: 50px
+        
             .blue-line
                 margin-left: auto
                 transform: rotate(0deg)
@@ -293,6 +289,19 @@
     
 @media screen and ( max-width: 520px )
     .about-boo
+        padding-top: 62px
+        .top
+            .title
+                line-height: 1.2
+            .blue-line
+                width: 100%
+                transform: revert
+                margin-left: auto
+        .foot-print-title
+            display: block
+            position: absolute
+            width: 90%
+            top: 1%
         .column-mobile
             .card
                 width: 100%

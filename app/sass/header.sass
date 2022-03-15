@@ -9,6 +9,7 @@
     z-index: 1
     .nav
         justify-content: flex-end
+        height: 44px
     .nav-ul
         justify-content: flex-end
         gap: 24px
@@ -68,6 +69,23 @@
         &:hover, .active
             &::after
                 opacity: 1
+    .with-dropdown
+        position: relative
+        z-index: 2
+        &:hover .dropdown
+            display: block
+        .dropdown
+            position: absolute
+            background-color: white
+            padding: 24px 
+            top: 44px
+            border-radius: 24px
+            display: none
+        .drop-items
+            flex-direction: column
+            gap: 20px
+                
+            
     .lang
         cursor: pointer
         &::after
