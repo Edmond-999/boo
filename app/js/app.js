@@ -6,18 +6,34 @@ $(document).ready(function () {
     }, 3000);
   });
 
-  $(".lines").click(function () {
-    if ($(".lines").hasClass("opened")) {
-      $(".lines").removeClass("opened");
+  function openMenu() {
+    $(".lines").addClass("opened");
+    $(".nav-ul").addClass("opened");
+    $('.menu-backdrop').addClass('show')
+  }
+
+  function closeMenu() {
+    $(".lines").removeClass("opened");
+    $(".nav-ul").removeClass("opened");
+    $('.menu-backdrop').removeClass('show')
+  }
+
+  $(".burger").click(function () {
+    if ($('.nav-ul').hasClass('opened')) {
+      closeMenu()
     } else {
-      $(".lines").addClass("opened");
-    }
-    if ($(".nav-ul").hasClass("mobile")) {
-      $(".nav-ul").removeClass("mobile");
-    } else {
-      $(".nav-ul").addClass("mobile");
+      openMenu()
     }
   });
+
+  $(".order-link").click(function() {
+    $('html, body').animate({
+        scrollTop: $(".surprise").offset().top
+    }, 1000);
+});
+
+
+  
 
   $(".owl-carousel").owlCarousel({
     dots: true,
