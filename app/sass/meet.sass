@@ -1,12 +1,11 @@
 @import "colors.css"
 
-.about
+.meet
     padding: 58px 0 38px 0
     .top
         justify-content: space-between
         align-items: flex-end
         margin-bottom: 53px
-        
     .content
         gap: 112px
         margin-bottom: 38px
@@ -17,14 +16,16 @@
     .content-descr
         line-height: 1.4
         opacity: 67%
+    .orange-trace-mobile
+        display: none
 
 @media screen and ( max-width: 1280px )
-    .about
+    .meet
         .content
             gap: 50px
 
 @media screen and ( max-width: 992px )
-    .about
+    .meet
         .content
             gap: 30px
         .top
@@ -36,8 +37,9 @@
             font-size: 18px
         
 @media screen and ( max-width: 768px )
-    .about
+    .meet
         padding: 28px 0
+        position: relative
         .top
             flex-direction: column
             gap: 20px
@@ -66,5 +68,17 @@
                 background-repeat: no-repeat
         .content-li
             max-width: 100%
+
+@media screen and ( max-width: 420px )
+    .meet
+        padding-bottom: 84px
+        .orange-trace
+            display: none
+        .orange-trace-mobile
+            display: block
+            position: absolute
+            bottom: 0
+            right: 0
+            margin-bottom: 14px
     
     
