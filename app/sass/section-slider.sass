@@ -56,39 +56,89 @@
 
     .surprise-title-top
         margin-bottom: 15px
+    .surprise-title-3
+        margin-top: 250px
     .surprise-text
         max-width: 427px
         margin: 15px 0 20px auto
         line-height: 1.2
-    .span
+    .surprise-text-2
+        margin: 23px 0 0 auto
+    .surprise-text-3
+        max-width: 600px
+        margin: 10px 0 0 auto
+        line-height: 1.2
+    .surprise-p-3
+        margin-top: -70px
+    .span-2
         margin-left: 18px
+    .span-sale
+        margin-left: 39px
     .btn
         margin-top: 65px
+    .btn-3
+        margin: 36px 0 85px 0
 
-@media screen and ( max-width: 1024px )
+@media screen and ( max-width: 1280px )
     .surprise
         .surprise-title-top,.surprise-title-bottom
             @include fontSize(60)
-        .surprise-text, .span
+        .surprise-title-3
+            @include fontSize(60)
+            margin-top: 200px
+        .surprise-text, .span-2
             @include fontSize(26)
-        .surprise-p
+        .span-1
             @include fontSize(66)
+        .span-percent
+            @include fontSize(150)
+        .surprise-text-3
+            @include fontSize(30)
+        .span-sale
+            @include fontSize(40)
+        .surprise-p-3
+            margin-top: -50px
+        .btn-3
+            margin: 20px 0 85px 0
+
+@media screen and ( max-width: 1024px )
+    .surprise
+        .surprise-title-top,.surprise-title-bottom, .surprise-title-3
+            @include fontSize(40)
+        .surprise-title-3
+            margin-top: 75px
+        .surprise-text
+            margin: 5px 0 10px auto
+        .surprise-text-3
+            @include fontSize(26)
+            max-width: 500px
+        .span-percent
+            @include fontSize(100)
+        .span-sale
+            @include fontSize(30)
+            margin-left: 14px
+        .surprise-p-3
+            margin-top: -15px
+        .btn, .btn-3
+            margin: 20px 0 15px 0
 
 @media screen and ( max-width: 768px )                
     .surprise
-        .surprise-title-top,.surprise-title-bottom
-            @include fontSize(28)
-        .surprise-text, .span
-            @include fontSize(16)
-        .surprise-p
-            @include fontSize(28)
+        .surprise-text, .span-2
+            @include fontSize(20)
+        .span-1
+            @include fontSize(36)
         .surprise-title-top
             margin-bottom: 5px
         .surprise-text
-            max-width: 162px
+            max-width: 250px
             margin: 5px 0 10px auto
-        .span
+        .span-2
             margin-left: 2px
+        .span-percent
+            @include fontSize(68)
+        .span-sale
+            @include fontSize(32)
         .slider-item
             .figure
                 padding-top: 70%
@@ -97,9 +147,23 @@
             min-width: 162px
             padding: 12px
             margin-top: 28px
+        .btn-3
+            margin: 0 0 15px 0
 
 @media screen and ( max-width: 450px )
     .surprise
+        .surprise-title-top,.surprise-title-bottom
+            @include fontSize(28)
+        .surprise-title-3, .surprise-text-3
+            @include fontSize(16)
+        .surprise-text-3
+            max-width: 170px
+        .span-percent
+            @include fontSize(52)
+        .span-sale
+            @include fontSize(20)
         .slider-item
             .figure
                 padding-top: 100%
+        .surprise-text
+            max-width: 162px
