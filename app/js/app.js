@@ -9,31 +9,49 @@ $(document).ready(function () {
   function openMenu() {
     $(".lines").addClass("opened");
     $(".nav-ul").addClass("opened");
-    $('.menu-backdrop').addClass('show')
+    $(".backdrop").addClass("show");
   }
 
   function closeMenu() {
     $(".lines").removeClass("opened");
     $(".nav-ul").removeClass("opened");
-    $('.menu-backdrop').removeClass('show')
+    $(".backdrop").removeClass("show");
   }
 
   $(".burger").click(function () {
-    if ($('.nav-ul').hasClass('opened')) {
-      closeMenu()
+    if ($(".nav-ul").hasClass("opened")) {
+      closeMenu();
     } else {
-      openMenu()
+      openMenu();
     }
   });
 
-  $(".order-link").click(function() {
-    $('html, body').animate({
-        scrollTop: $(".surprise").offset().top
-    }, 1000);
-});
+  $(".order-link").click(function () {
+    $("html, body").animate(
+      {
+        scrollTop: $(".surprise").offset().top,
+      },
+      1000
+    );
+  });
 
+  $(".about-link").click(function () {
+    $("html, body").animate(
+      {
+        scrollTop: $(".about-boo").offset().top,
+      },
+      1000
+    );
+  });
 
-  
+  $(".contact-link").click(function () {
+    $("html, body").animate(
+      {
+        scrollTop: $(".order").offset().top,
+      },
+      1000
+    );
+  });
 
   $(".owl-carousel").owlCarousel({
     dots: true,
