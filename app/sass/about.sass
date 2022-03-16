@@ -1,11 +1,9 @@
 @import 'colors.css'
 
-@mixin fontSize($value)
-    font-size: ($value/16+rem)
-
-.about-boo
+.about
     padding: 53px 0 110px 0
     position: relative
+    overflow: hidden
     .foot-print-1
         position: absolute
         width: 50%
@@ -133,7 +131,7 @@
 
     
 @media screen and ( max-width: 1250px )
-    .about-boo
+    .about
         .foot-print-2-3
             width: 26%
             left: 57%
@@ -160,7 +158,7 @@
         
 
 @media screen and ( max-width: 992px )
-    .about-boo
+    .about
         .foot-print-1, .foot-print-2-3
             display: none
         .row
@@ -229,7 +227,7 @@
 
 
 @media screen and ( max-width: 768px )
-    .about-boo
+    .about
         padding: 28px 0 58px 0
         .top
             flex-direction: column-reverse
@@ -247,7 +245,7 @@
 
     
 @media screen and ( max-width: 667px )
-    .about-boo
+    .about
         .card-title
             @include fontSize(16)
             margin-bottom: 20px
@@ -288,7 +286,7 @@
                 bottom: -13%
     
 @media screen and ( max-width: 520px )
-    .about-boo
+    .about
         padding-top: 62px
         .top
             .title

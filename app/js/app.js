@@ -1,10 +1,13 @@
 $(document).ready(function () {
-  $(".submit").click(function () {
-    $(".modal-backdrop").addClass("show");
-    setTimeout(function () {
-      $(".modal-backdrop").removeClass("show");
-    }, 3000);
-  });
+  function showSuccessModal() {
+    $(".backdrop").addClass("show");
+    $(".success-popup").addClass("show");
+  }
+
+  function hideSuccessModal() {
+    $(".backdrop").removeClass("show");
+    $(".success-popup").removeClass("show");
+  }
 
   function openMenu() {
     $(".lines").addClass("opened");
@@ -18,6 +21,15 @@ $(document).ready(function () {
     $(".backdrop").removeClass("show");
   }
 
+  // show success popup after ordering
+  $(".submit").click(function () {
+    showSuccessModal();
+    setTimeout(function () {
+      hideSuccessModal();
+    }, 3000);
+  });
+
+  // Open/close menu
   $(".burger").click(function () {
     if ($(".nav-ul").hasClass("opened")) {
       closeMenu();
@@ -26,6 +38,7 @@ $(document).ready(function () {
     }
   });
 
+  // Animate to suprise section
   $(".order-link").click(function () {
     $("html, body").animate(
       {
@@ -33,17 +46,21 @@ $(document).ready(function () {
       },
       1000
     );
+    closeMenu();
   });
 
+  // Animate to about section
   $(".about-link").click(function () {
     $("html, body").animate(
       {
-        scrollTop: $(".about-boo").offset().top,
+        scrollTop: $(".about").offset().top,
       },
       1000
     );
+    closeMenu();
   });
 
+  // Animate to order section
   $(".contact-link").click(function () {
     $("html, body").animate(
       {
@@ -51,8 +68,10 @@ $(document).ready(function () {
       },
       1000
     );
+    closeMenu();
   });
 
+  // Order slider
   $(".owl-carousel").owlCarousel({
     dots: true,
     nav: false,
@@ -60,5 +79,16 @@ $(document).ready(function () {
     items: 1,
     margin: 0,
     autoplay: false,
+  });
+
+  $(document).mouseup(function (e) {
+    var popup = $(".nav-ul");
+    if (
+      !$(".burger").is(e.target) &&
+      !popup.is(e.target) &&
+      popup.has(e.target).length == 0
+    ) {
+      closeMenu();
+    }
   });
 });

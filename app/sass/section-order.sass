@@ -55,26 +55,30 @@
         display: none
     .btn
         @include fontSize(20)
-    .modal-backdrop
-        .accept
-            position: absolute
-            top: 50%
-            left: 50%
-            transform: translate(-50%,-50%)
-            border-radius: 50px
-            padding: 92px 119px 36px 119px
-            width: 100%
-            max-width: 646px
-            text-align: center
-            z-index: 4
-            .submited
-                display: block
-        .accept-p
-            line-height: 1.5
-        .accept-img
-            width: 100%
-            max-width: 92px
-            margin-top: 42px
+
+.success-popup
+    display: none
+    &.show
+        display: block
+    .accept
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%,-50%)
+        border-radius: 50px
+        padding: 92px 119px 36px 119px
+        width: 100%
+        max-width: 646px
+        text-align: center
+        z-index: 16
+        .submited
+            display: block
+    .accept-p
+        line-height: 1.5
+    .accept-img
+        width: 100%
+        max-width: 92px
+        margin-top: 42px
 
 @media screen and ( max-width: 1400px )
     .order
