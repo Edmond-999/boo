@@ -7,8 +7,11 @@
         align-items: flex-end
         margin-bottom: 53px
     .content
-        gap: 112px
+        gap: 30px
         margin-bottom: 38px
+        justify-content: space-between
+        max-width: 95%
+        margin: 0 auto
     .content-li
         max-width: 336px
     .content-title
@@ -18,6 +21,9 @@
         opacity: 67%
     .orange-trace-mobile
         display: none
+    .orange-trace
+        display: block
+        margin-top: 60px
 
 @media screen and ( max-width: 1280px )
     .meet
@@ -26,8 +32,6 @@
 
 @media screen and ( max-width: 992px )
     .meet
-        .content
-            gap: 30px
         .top
             margin-bottom: 40px
         .content-title
@@ -35,18 +39,6 @@
             margin-bottom: 28px
         .content-descr
             font-size: 18px
-        
-@media screen and ( max-width: 768px )
-    .meet
-        padding: 28px 0
-        position: relative
-        .top
-            flex-direction: column
-            gap: 20px
-            align-items: flex-start
-            margin-bottom: 24px
-        .title
-            font-size: 28px
         .content
             flex-direction: column
             gap: 38px
@@ -68,17 +60,26 @@
                 background-repeat: no-repeat
         .content-li
             max-width: 100%
+        
+@media screen and ( max-width: 768px )
+    .meet
+        padding: 28px 0
+        position: relative
+        .top
+            flex-direction: column
+            gap: 20px
+            align-items: flex-start
+            margin-bottom: 24px
+        .title
+            font-size: 28px
 
 @media screen and ( max-width: 420px )
     .meet
-        padding-bottom: 84px
+        padding-bottom: 0
         .orange-trace
             display: none
         .orange-trace-mobile
             display: block
-            position: absolute
-            bottom: 0
-            right: 0
             margin-bottom: 14px
     
     

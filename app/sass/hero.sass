@@ -1,9 +1,11 @@
 @import 'colors.css'
 
 .hero
-    padding: 100px 0 50px 0
+    padding: 200px 0 0 0
     position: relative
     .hero-img 
+        &.lg
+            transform: translateY(-50px)
         &.sm 
             display: none
     .container
@@ -15,6 +17,7 @@
         position: relative
         width: 100%
     .content
+        padding-top: 100px
         position: absolute
         top: 50%
         transform: translateY(-50%)
@@ -49,10 +52,6 @@
     .hero
         .container
             gap: 180px
-
-
-@media screen and ( max-width: 992px )
-    .hero
         .c-white, .c-orange
             @include fontSize(36)
         .c-yellow
