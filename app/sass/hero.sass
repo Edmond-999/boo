@@ -13,7 +13,7 @@
     .container
         justify-content: flex-end
         align-items: center
-        gap: 200px
+        gap: 240px
         
     .hero-bg
         position: fixed
@@ -48,21 +48,35 @@
         bottom: 0
         right: 65px
 
+@media screen and ( max-width: 1260px )
+    .hero
+        .container
+            gap: 180px
+
 @media screen and ( max-width: 1124px )
     .hero
         padding-bottom: 80px
         .bg-image
             top: 0
         .container
-            gap: 100px
+            gap: 105px
+
 
 @media screen and ( max-width: 992px )
     .hero
         padding: 48px 0 
+        .container
+            gap: 160px
         .c-white, .c-orange
             @include fontSize(36)
         .c-yellow
             @include fontSize(44)
+
+@media screen and ( max-width: 912px )
+    .hero
+        .container
+            gap: 120px
+
 
 @media screen and ( max-width: 768px )
     .hero
