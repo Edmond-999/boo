@@ -60,6 +60,21 @@ img
     position: relative
     z-index: 1
 
+ .container
+    width: 95%
+    max-width: 1670px
+    margin: 0 auto
+    @media screen and ( max-width: 1440px )
+        width: 95%
+        max-width: 1310px
+        margin: 0 auto
+    @media screen and ( max-width: 992px )
+        width: 100%
+        padding: 0 30px
+    @media screen and ( max-width: 768px )
+        width: 100%
+        padding: 0 20px
+
 .blue-line
     width: 50%
     height: 23px
@@ -80,35 +95,6 @@ img
         display: block
 
 
-.container
-    width: 95%
-    max-width: 1670px
-    margin: 0 auto
-    @media screen and ( max-width: 1440px )
-        width: 95%
-        max-width: 1310px
-        margin: 0 auto
-    @media screen and ( max-width: 992px )
-        width: 100%
-        padding: 0 30px
-    @media screen and ( max-width: 768px )
-        width: 100%
-        padding: 0 20px
-    width: 95%
-    max-width: 1670px
-    margin: 0 auto
-    @media screen and ( max-width: 1440px )
-        width: 95%
-        max-width: 1310px
-        margin: 0 auto
-    @media screen and ( max-width: 992px )
-        width: 100%
-        padding: 0 30px
-    @media screen and ( max-width: 768px )
-        width: 100%
-        padding: 0 20px
-
-@media screen and ( max-width: 992px )
     .title
         @include fontSize(34)
 
@@ -116,6 +102,7 @@ img
         height: 15px
     
 @media screen and ( max-width: 768px )
+
     .title
         @include fontSize(28)
 
