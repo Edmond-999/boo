@@ -1,27 +1,24 @@
 @import 'colors.css'
 
 .hero
-    padding: 48px 0 150px 0
+    padding: 100px 0 50px 0
     position: relative
-    
-    .bg-image
-        position: absolute
-        top: -10%
-        left: 0
-    .foot-print-hero-mobile
-        display: none
+    .hero-img 
+        &.sm 
+            display: none
     .container
-        justify-content: flex-end
-        align-items: center
-        gap: 240px
-        
-    .hero-bg
-        position: fixed
-        top: 0
-        left: 0
-    .main-logo
-        width: 40%
+        position: absolute
+        left: 50%
+        top: 38%
+        transform: translateX(-50%)
+    .content-container
+        position: relative
+        width: 100%
     .content
+        position: absolute
+        top: 50%
+        transform: translateY(-50%)
+        right: 0
         text-align: center
         display: flex
         flex-direction: column
@@ -45,7 +42,7 @@
             
     .white-line
         position: absolute
-        bottom: 0
+        bottom: -1px
         right: 65px
 
 @media screen and ( max-width: 1260px )
@@ -53,76 +50,52 @@
         .container
             gap: 180px
 
-@media screen and ( max-width: 1124px )
-    .hero
-        padding-bottom: 80px
-        .bg-image
-            top: 0
-        .container
-            gap: 105px
-
 
 @media screen and ( max-width: 992px )
     .hero
-        padding: 48px 0 
-        .container
-            gap: 160px
         .c-white, .c-orange
             @include fontSize(36)
         .c-yellow
             @include fontSize(44)
 
-@media screen and ( max-width: 912px )
-    .hero
-        .main-logo
-            width: 45%
-        .container
-            gap: 100px
-
 
 @media screen and ( max-width: 768px )
     .hero
-        padding: 0 0 160px 0
-        .bg-image
-            display: none
-        .foot-print-hero-mobile
-            display: block
-            position: absolute
-            bottom: -20%
-            left: 0
-        .container
-            flex-direction: column
-            gap: 0
-        .main-logo
-            width: 90%
-            margin-right: auto
-        .btn,.orange
+        padding: 0
+        .hero-img
+            &.lg 
+                display: none
+            &.sm
+                display: block
+                transform: translateY(70px)
+        .btn, .orange
             display: none
         .content
-            margin-left: auto
-            margin-top: -50px
+            padding-top: 30vw
+            position: initial
+            text-align: right
             .title-wrapper
                 flex-direction: row
                 justify-content: flex-end
-                grid-gap: 20px
             .c-yellow
-                transform: rotate(0deg)
+                transform: initial
             .c-orange
-                transform: rotate(0)
+                transform: initial
         .white-line
             display: none
 
 @media screen and ( max-width: 667px )
     .hero
         .content
-            margin-top: -30px
+            padding-top: 45vw
             gap: 10px
             .title-wrapper
                 gap: 10px
     
 @media screen and ( max-width: 520px )
     .hero
-        padding-bottom: 100px
+        .hero-img
+            transform: translate(50px)
         .c-white, .c-orange
             @include fontSize(24)
         .c-yellow
