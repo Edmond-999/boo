@@ -11,9 +11,9 @@
         top: 10%
     .foot-print-2-3
         position: absolute
-        width: 24%
-        left: 49%
-        top: 10%
+        width: 29%
+        left: 47%
+        bottom: 0
         z-index: 2
     .foot-print-title
         display: none
@@ -93,7 +93,7 @@
             margin-left: auto
         .card-number-5
             left: 70%
-            bottom: -15%
+            bottom: -11%
         .card-icon-5
             right: 75%
             bottom: 10%
@@ -118,7 +118,7 @@
             text-align: end
             margin-left: auto
         .card-number-3
-            top: -18%
+            top: -14%
         .card-icon-3
             left: 50%
             bottom: -24%
@@ -345,6 +345,14 @@
                 padding-top: 32px
                 .question
                     @include fontSize(28)
-                
+    
+
+@media screen and ( max-width: 330px )
+    .about
+        .card
+            .card-number-2, .card-number-4
+                left: 102%
+            .card-number-5
+                left: -20%
 
             
