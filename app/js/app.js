@@ -38,11 +38,24 @@ $(document).ready(function () {
     }
   });
 
+  let headerHeight = $(".header").outerHeight();
+
+  // Animate to hero
+  $(".main-link").click(function () {
+    $("html, body").animate(
+      {
+        scrollTop: 0,
+      },
+      1000
+    );
+    closeMenu();
+  });
+
   // Animate to suprise section
   $(".order-link").click(function () {
     $("html, body").animate(
       {
-        scrollTop: $(".surprise").offset().top,
+        scrollTop: $(".surprise").offset().top - headerHeight,
       },
       1000
     );
@@ -53,7 +66,7 @@ $(document).ready(function () {
   $(".about-link").click(function () {
     $("html, body").animate(
       {
-        scrollTop: $(".about").offset().top,
+        scrollTop: $(".about").offset().top - headerHeight,
       },
       1000
     );
@@ -64,7 +77,7 @@ $(document).ready(function () {
   $(".contact-link").click(function () {
     $("html, body").animate(
       {
-        scrollTop: $(".order").offset().top,
+        scrollTop: $(".order").offset().top - headerHeight,
       },
       1000
     );
