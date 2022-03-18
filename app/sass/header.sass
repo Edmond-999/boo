@@ -23,7 +23,7 @@
             background-color: var(--white)
             padding: 24px 24px 31px 24px 
             border-radius: 20px
-            top: 64px
+            top: 52px
             right: -4px
             opacity: 1
             z-index: 16
@@ -38,12 +38,16 @@
                     position: absolute
                     right: 0
                     bottom: -14px
-                    width: 95px
+                    width: 100%
+                    max-width: 95px
                     height: 4px
                     background-image: url('../images/dest/blue-line-mobile.png')
                     background-repeat: no-repeat
                     opacity: 0
                     transition: all 200ms
+            // .nav-li::nth-child(4)
+                // &::after
+                //     width: 65px
                 &:hover, .active
                     &::after
                         opacity: 1
