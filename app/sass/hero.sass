@@ -3,6 +3,7 @@
 .hero
     padding: 200px 0 0 0
     position: relative
+    overflow: hidden
     .hero-img 
         &.lg
             transform: translateY(-50px)
@@ -21,8 +22,7 @@
         position: absolute
         top: 50%
         transform: translateY(-50%)
-        right: 0
-        text-align: center
+        right: 50px
         display: flex
         flex-direction: column
         justify-content: center
@@ -32,12 +32,12 @@
             grid-gap: 20px
         p
             text-shadow: 0px 2px 12px rgba(0, 0, 0, 0.25)
-        .c-white
-            transform: matrix(0.95, -0.32, 0.33, 0.95, 0, 0)
-        .c-yellow
-            transform: matrix(0.99, 0.1, -0.1, 0.99, 0, 0)
-        .c-orange
-            transform: matrix(0.97, -0.22, 0.23, 0.97, 0, 0)
+        .one
+            transform: rotate(-20deg) translate(130px,-20px)
+        .box
+            transform: rotate(9deg) translate(40px, 10px)
+        .happiness
+            transform: rotate(-9deg) translate(0,-10px)
         .btn
             margin-left: auto
             position: initial
@@ -52,6 +52,9 @@
     .hero
         .container
             gap: 180px
+        .content
+            .one
+                transform: rotate(-20deg) translate(90px,-20px)
         .c-white, .c-orange
             @include fontSize(36)
         .c-yellow
@@ -73,6 +76,8 @@
             padding-top: 30vw
             position: initial
             text-align: right
+            .one 
+                transform: rotate(-20deg) translate(-18px,-3px)
             .title-wrapper
                 flex-direction: row
                 justify-content: flex-end

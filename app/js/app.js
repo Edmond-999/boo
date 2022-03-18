@@ -29,6 +29,14 @@ $(document).ready(function () {
     }, 3000);
   });
 
+  $(window).scroll(function(){
+    if ($(window).scrollTop() > 10) {
+      $('.header').addClass('shadow')
+    } else {
+      $('.header').removeClass('shadow')
+    }
+  })
+
   // Open/close menu
   $(".burger").click(function () {
     if ($(".nav-ul").hasClass("opened")) {
