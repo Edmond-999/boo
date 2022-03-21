@@ -29,13 +29,15 @@ $(document).ready(function () {
     }, 3000);
   });
 
-  $(window).scroll(function(){
+  $(window).scroll(function () {
     if ($(window).scrollTop() > 10) {
-      $('.header').addClass('shadow bg-blue')
+      $(".header").addClass("shadow bg-blue");
+      $(".header .logo").addClass("show");
     } else {
-      $('.header').removeClass('shadow bg-blue')
+      $(".header").removeClass("shadow bg-blue");
+      $(".header .logo").removeClass("show");
     }
-  })
+  });
 
   // Open/close menu
   $(".burger").click(function () {
