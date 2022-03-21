@@ -31,9 +31,9 @@ $(document).ready(function () {
 
   $(window).scroll(function(){
     if ($(window).scrollTop() > 10) {
-      $('.header').addClass('shadow')
+      $('.header').addClass('shadow bg-blue')
     } else {
-      $('.header').removeClass('shadow')
+      $('.header').removeClass('shadow bg-blue')
     }
   })
 
