@@ -115,16 +115,18 @@
             height: 3px
             border-radius: 20px 
             transform: matrix(1, 0, 0, -1, 0, 0)
-            transition: all 200ms
+            // transition: all 200ms
         &.opened
-            .line:nth-child(1)
-                transform: rotate(45deg)
-                margin-top: 6px
-            .line:nth-child(2)
-                display: none
-            .line:nth-child(3)
-                transform: rotate(-45deg)
-                margin-top: -6px
+            position: initial
+            z-index: -1
+        //     .line:nth-child(1)
+        //         transform: rotate(45deg)
+        //         margin-top: 6px
+        //     .line:nth-child(2)
+        //         display: none
+        //     .line:nth-child(3)
+                // transform: rotate(-45deg)
+                // margin-top: -6px
  
 @media screen and ( max-width: 992px )
     .header
@@ -142,6 +144,7 @@
 
 @media screen and ( max-width: 768px )
     .header
+        height: 40px
         .nav
             align-items: center
         .nav-link
@@ -158,7 +161,7 @@
                 background-color: var(--white)
                 padding: 24px 24px 31px 24px 
                 border-radius: 20px
-                top: 66px
+                top: 44px
                 right: -4px
                 opacity: 1
                 z-index: 16
