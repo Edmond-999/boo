@@ -1,0 +1,47 @@
+.faq
+    padding: 140px 0
+    .container
+    .section-title
+        text-align: center
+        line-height: 1.3
+    .faq-cards
+        max-width: 1100px
+        margin: 80px auto 0 auto
+        display: flex
+        flex-wrap: wrap
+        justify-content: center
+        gap: 32px
+    .card
+        width: 45%
+        flex-grow: 1
+        max-width: 525px
+        .answer
+            margin-bottom: 30px
+    .faq-footer
+        width: 100%
+        max-width: 576px
+        margin: 0 auto
+        text-align: center
+        margin-top: 140px
+    .faq-footer-title
+        margin-bottom: 30px
+
+@media screen and ( max-width: 667px ) 
+    .faq
+        padding: 80px 0
+        .section-title, .faq-footer-title
+            font-size: 28px
+        .question
+            font-size: 18px
+        .faq-cards
+            flex-direction: column
+            align-items: center
+            margin-top: 40px
+        .card
+            width: 100%
+            max-width: initial
+            .answer
+                font-size: 22px
+                margin-bottom: 20px
+        .faq-footer
+            margin-top: 80px
