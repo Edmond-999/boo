@@ -95,6 +95,17 @@ $(document).ready(function () {
     closeMenu();
   });
 
+  // Animate to order faq
+  $(".faq-link").click(function () {
+    $("html, body").animate(
+      {
+        scrollTop: $(".faq").offset().top,
+      },
+      1000
+    );
+    closeMenu();
+  });
+
   // Order slider
   $(".owl-carousel").owlCarousel({
     dots: true,
