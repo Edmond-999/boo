@@ -1,0 +1,113 @@
+.subscription
+    padding: 53px 0 120px
+    position: relative
+    .container
+        justify-content: flex-end
+    .items-content-wrapper
+        text-align: center
+    .boo-img
+        max-width: 493px
+        position: absolute
+        top: -23px
+        left: 0
+    .boo-img-mobile
+        display: none
+    .items-wrapper
+        gap: 32px
+    .item
+        border-radius: 24px
+        padding: 34px 34px 47px
+        text-align: center
+        width: 50%
+    .item-img
+        margin: 0 auto
+    .item-img-1
+        max-width: 68px
+    .item-img-2
+        max-width: 60px
+    .item-title
+        margin: 22px 0 25px 
+    .paragraph-price
+        margin: 4px 0 28px
+    .paragraph-delivery
+        margin-bottom: 55px
+    .btn
+        padding: 16px 35px
+    .content-p
+        margin: 42px 0 15px
+    .button
+        border: none
+        background: transparent
+        cursor: pointer
+        transition: all 200ms
+        &:hover
+            color: var(--orange)
+    .span-delivery-mobile
+        display: none
+
+
+@media screen and (max-width: 1366px)
+    .subscription
+        .boo-img
+            max-width: 410px
+
+@media screen and (max-width: 1280px)
+    .subscription
+        .boo-img
+            display: none   
+        .boo-img-mobile
+            display: block
+            position: absolute
+            bottom: 0
+            left: 0
+            max-width: 166px
+        .items-content-wrapper
+            text-align: center
+            width: 100% 
+
+@media screen and (max-width: 992px)
+    .subscription
+        .items-wrapper
+            flex-direction: column
+        .item
+            width: 100%
+        .items-content-wrapper
+            text-align: right
+        
+@media screen and (max-width: 768px)
+    .subscription
+        padding: 25px 0 42px
+        .boo-img-mobile
+            max-width: 145px
+        .item
+            padding: 18px 18px 29px
+        .item-img
+            max-width: 35px
+        .item-title
+            margin: 5px 0 15px 
+            @include fontSize(18)
+            font-weight: 900
+            color: var(--blue)
+        .paragraph
+            @include fontSize(14)
+        .paragraph-price
+            @include fontSize(20)
+            margin: 4px 0
+        .span-dram
+            @include fontSize(32)
+        .span-delivery
+            display: none
+        .paragraph-delivery
+            margin-bottom: 22px
+        .span-delivery-mobile
+            display: block
+        .btn
+            @include fontSize(14)
+            padding: 11.5px 34.5px
+
+        .content-p
+            max-width: 210px
+            margin: 20px 0 14px auto
+            font-weight: 300
+            @include fontSize(14)
+            line-height: 1.4
