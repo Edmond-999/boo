@@ -124,7 +124,6 @@ $(document).ready(function () {
 
   function closePopup() {
     $(".offer").removeClass("show");
-    console.log("hfhfh")
   }
 
   $(".button").click(function () {

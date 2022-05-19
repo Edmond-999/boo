@@ -5,6 +5,8 @@
         justify-content: flex-end
     .items-content-wrapper
         text-align: center
+        width: 100%
+        max-width: 864px
     .boo-img
         max-width: 493px
         position: absolute
@@ -16,7 +18,7 @@
         gap: 32px
     .item
         border-radius: 24px
-        padding: 34px 34px 47px
+        padding: 34px 50px 47px
         text-align: center
         width: 50%
     .item-img
@@ -46,10 +48,10 @@
         display: none
 
 
-@media screen and (max-width: 1366px)
+@media screen and (max-width: 1410px)
     .subscription
         .boo-img
-            max-width: 410px
+            max-width: 380px
 
 @media screen and (max-width: 1280px)
     .subscription
@@ -63,7 +65,9 @@
             max-width: 166px
         .items-content-wrapper
             text-align: center
-            width: 100% 
+            max-width: initial
+        .items-wrapper
+            justify-content: space-between
 
 @media screen and (max-width: 992px)
     .subscription
