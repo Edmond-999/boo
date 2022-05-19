@@ -116,4 +116,23 @@ $(document).ready(function () {
       hideSuccessModal();
     }
   });
+
+
+  function showPopup() {
+    $(".offer").addClass("show");
+  }
+
+  function closePopup() {
+    $(".offer").removeClass("show");
+    console.log("hfhfh")
+  }
+
+  $(".button").click(function () {
+    showPopup();
+  });
+
+  $(".offer-button").click(function () {
+    closePopup();
+  });
+  
 });
