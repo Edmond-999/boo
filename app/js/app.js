@@ -119,18 +119,18 @@ $(document).ready(function () {
 
 
   function showPopup() {
-    $(".offer").addClass("show");
+    $(".modal-backdrop").addClass("show");
   }
 
   function closePopup() {
-    $(".offer").removeClass("show");
+    $(".modal-backdrop").removeClass("show");
   }
 
   $(".button").click(function () {
     showPopup();
   });
 
-  $(".offer-button").click(function () {
+  $(".popup-button").click(function () {
     closePopup();
   });
   

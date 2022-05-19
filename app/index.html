@@ -638,17 +638,17 @@
       <div class="container d-flex">
         <div class="items-content-wrapper">
           <div class="items-wrapper d-flex">
-            <div class="item bg-white">
+            <div class="item bg-white d-flex">
               <img class="item-img item-img-1" src="images/src/opened-box.png" alt="Opened box image">
-              <h3 class="item-title fz24 fw800 c-orange">Բաժանորդագրություն</h3>
+              <h5 class="item-title fz24 fw800 c-orange">Բաժանորդագրություն</h5>
               <p class="paragraph fz32 fw400 c-blue">Ամսական</p>
               <p class="paragraph-price fz24 fw800 c-orange"><span class="span-dram fz48 fw400 nerko">10000</span> դրամ</p>
               <p class="paragraph-delivery"><span class="span-delivery fz12 fw500 c-gray">առաքվում է յուրաքանչյուր ամսվա 5-10ը:</span><span class="span-delivery-mobile fz12 fw400 c-gray">առաքվում է ամեն ամսվա 5-10ը։ </span></p>
               <a href="#" class="btn fz16 bg-orange c-white">ԲԱԺԱՆՈՐԴԱԳՐՎԵԼ</a>
             </div>
-            <div class="item bg-white">
+            <div class="item bg-white d-flex">
               <img class="item-img item-img-2" src="images/src/present-box.png" alt="Present box image">
-              <h3 class="item-title fz24 fw800 c-orange">Նվեր տուփ</h3>
+              <h5 class="item-title fz24 fw800 c-orange">Նվեր տուփ</h5>
               <p class="paragraph fz32 fw400 c-blue">Մեկ անգամյա</p>
               <p class="paragraph-price fz24 fw800 c-orange"><span class="span-dram fz48 fw400 nerko">15000</span> դրամ</p>
               <p class="paragraph-delivery fz12 fw500 c-gray">առաքվում է 48 ժամվա ընթացքում:</p>
@@ -659,37 +659,41 @@
           <button class="button fz14 fw600 c-white">Ստանալ Առաջարկ</button>
         </div>
       </div>
-      <div class="offer d-flex">
+      <div class="modal-backdrop d-flex">
         <div class="popup bg-white">
-          <div class="popup-top d-flex">
-            <h3 class="popup-title fz24 fw900 c-orange">Կորպորատիվ Առաջարկ</h3>
-            <button class="offer-button">
+          <div class="popup-header d-flex">
+            <h6 class="popup-title fz24 fw900 c-orange">Կորպորատիվ Առաջարկ</h6>
+            <button class="popup-button">
               <img class="close-btn" src="images/src/close-btn.png" alt="Close">
             </button>
           </div>
-          <div class="popup-center bg-blue">
+          <div class="popup-body bg-blue">
             <form class="form">
               <div class="input-wrapper">
                 <label class="label fz14 fw500 c-white" for="name">Անուն</label>
-                <input class="input" id="name" type="text"></input>
+                <input class="input fz14 fw300 c-gray" id="name" type="text"></input>
+                <p class="message fz12 fw300 c-blueDark">Լրացնել դաշտը</p>
               </div>
               <div class="tel-email-wrapper d-flex">
                 <div class="input-wrapper">
                   <label class="label fz14 fw500 c-white" for="tel">Հեռ․</label>
-                  <input class="input" id="tel" type="text">
+                  <input class="input fz14 fw300 c-gray" id="tel" type="text">
+                  <p class="message fz12 fw300 c-blueDark">Լրացնել դաշտը</p>
                 </div>
                 <div class="input-wrapper">
                   <label class="label fz14 fw500 c-white" for="email">Էլ․Հասցե</label>
-                  <input class="input" id="email" type="email">
+                  <input class="input fz14 fw300 c-gray" id="email" type="email">
+                  <p class="message fz12 fw300 c-blueDark">Լրացնել դաշտը</p>
                 </div>
               </div>
               <div class="input-wrapper">
                 <label class="label fz14 fw500 c-white" for="note">Նշումներ</label>
-                <textarea class="textarea" id="note"></textarea>
+                <textarea class="textarea fz14 fw300 c-gray" id="note"></textarea>
+                <p class="message fz12 fw300 c-blueDark">Լրացնել դաշտը</p>
               </div>
             </form>
           </div>
-          <div class="popup-bottom">
+          <div class="popup-footer">
             <button class="btn fz16 fw800 c-white bg-orange">ՍՏԱՆԱԼ ԱՌԱՋԱՐԿ</button>
           </div>
         </div>

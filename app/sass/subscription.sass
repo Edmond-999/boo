@@ -21,20 +21,24 @@
         padding: 34px 50px 47px
         text-align: center
         width: 50%
+        flex-direction: column
     .item-img
         margin: 0 auto
     .item-img-1
         max-width: 68px
     .item-img-2
         max-width: 60px
+        margin-bottom: 7px
     .item-title
         margin: 22px 0 25px 
     .paragraph-price
         margin: 4px 0 28px
     .paragraph-delivery
-        margin-bottom: 55px
+        margin-bottom: 28px
     .btn
         padding: 16px 35px
+        display: inline-block
+        margin-top: auto
     .content-p
         margin: 42px 0 15px
     .button
@@ -88,7 +92,7 @@
         .item-img
             max-width: 35px
         .item-title
-            margin: 5px 0 15px 
+            margin: 8px 0 20px 
             @include fontSize(18)
             font-weight: 900
             color: var(--blue)
@@ -96,7 +100,7 @@
             @include fontSize(14)
         .paragraph-price
             @include fontSize(20)
-            margin: 4px 0
+            margin: 10px 0
         .span-dram
             @include fontSize(32)
         .span-delivery
@@ -108,10 +112,14 @@
         .btn
             @include fontSize(14)
             padding: 11.5px 34.5px
-
         .content-p
             max-width: 210px
             margin: 20px 0 14px auto
             font-weight: 300
             @include fontSize(14)
             line-height: 1.4
+
+@media screen and (max-width: 350px)
+    .subscription
+        .boo-img-mobile
+            max-width: 100px
