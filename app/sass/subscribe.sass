@@ -1,11 +1,11 @@
-.subscribe
+.subscribe-modal
     padding: 23px 0 0 0
     display: flex
     flex-direction: column
     align-items: center
     position: relative
     z-index: 0
-    .subscription-container
+    .subscribe-modal-header
         padding: 47px 5vw
         width: 100%
         max-width: 1700px
@@ -32,7 +32,7 @@
     .icon-p
         max-width: 286px
         line-height: 1.5
-    .details-value-wrapper
+    .subscribe-modal-body
         justify-content: flex-start
         max-width: 1700px
         width: 100%
@@ -52,11 +52,11 @@
         width: 64.5%
         padding: 72px 64px 60px 5vw
         max-width: 1100px
-    .details-titel-btn-wrapper
+    .details-title-btn-wrapper
         justify-content: space-between
         align-items: center
         margin-bottom: 20px
-    .btn-text-wrapper
+    .plus-btn
         align-items: center
         gap: 10px
     .plus-btn
@@ -99,10 +99,9 @@
         display: none
         &.show
             display: block
-    .btn-mobile
+    .plus-btn.mobile
         display: none
         margin-top: 22px
-    .btn-text-wrapper-mobile
         align-items: center
         gap: 10px
     .details-title-2
@@ -128,8 +127,10 @@
         box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.08)
         border-radius: 16px
         margin: 75px 64px 0 32px
-        padding: 64px 80px
+        padding: 64px 4vw
         max-width: 416px
+        @media only screen and ( min-width: 1600px )
+            padding: 64px 80px
     .price-wrapper, .sale-wrapper, .total-wrapper
         justify-content: space-between
     .sale-wrapper
@@ -164,20 +165,29 @@
         background-clip: content-box
     
 
-@media screen and (max-width: 1366px)
-    .subscribe
-        .details-value-wrapper
+@media screen and (max-width: 1180px) and (min-width: 900px)
+    .subscribe-modal
+        .value-container
+            padding: 64px 2vw
+
+@media screen and (max-width: 992px)
+    .subscribe-modal
+        .subscribe-modal-body
             flex-direction: column
+            &::after 
+                display: none
         .details
             width: 100%
+            max-width: initial
         .value
             width: 100%
+            max-width: initial
         .value-container
             width: 70%
             margin: 75px auto 50px auto
 
 @media screen and (max-width: 992px)
-    .subscribe
+    .subscribe-modal
         .subscribe-blue-line
             height: 2px
             margin-left: 0
@@ -185,10 +195,31 @@
             gap: 40px
         .details
             padding: 39px 24px 24px 24px
-
+        .form-wrapper
+            background-color: rgba(255,255,255,0.2)
+            padding: 19px 24px 40px 24px
+        .form
+            flex-direction: column
+            gap: 19px
+        .label
+            margin-left: 12px
+        .input-wrapper
+            width: 100% 
+        .plus-btn.mobile
+            display: flex
+        .details-title-2
+            margin: 45px 0 20px 0
+        .tel-span
+            display: none
+        .contact-wrapper
+            display: none
+        .value
+            padding: 24px 24px 33px 24px
+            .btn
+                margin-top: 18px
 
 @media screen and (max-width: 768px)
-    .subscribe
+    .subscribe-modal
         padding: 14px 0 0 0
         .title-btn-wrapper
             padding: 14px 0
@@ -204,7 +235,7 @@
             max-width: 35px
         .details-title
             @include fontSize(14)
-        .btn-text-wrapper
+        .plus-btn
             display: none
         .form-wrapper
             background-color: rgba(255,255,255,0.2)
@@ -238,7 +269,7 @@
             margin: 20px 0 46px 0
     
 @media screen and (max-width: 340px)
-    .subscribe
+    .subscribe-modal
         .form-wrapper
             padding: 19px 15px 40px 15px
         .value-container

@@ -18,36 +18,35 @@
     />
   </head>
 <body>
-    <section class="subscribe bg-grayUltraLight">
-        <div class="subscription-container">
+    <section class="subscribe-modal bg-grayUltraLight">
+        <div class="subscribe-modal-header">
             <div class="title-btn-wrapper d-flex">
                 <h3 class="title fz24 fw900 c-orange">Բաժանորդագրություն</h3>
                 <button class="close-btn">
                     <img class="close-icon" src="images/src/close-icon.png" alt="Close button">
                 </button>
             </div>
-            <img class="subscribe-blue-line" src="images/src/subscribe-blue-line.png" alt="Blue-line">
+            <img class="subscribe-blue-line" src="images/src/subscribe-blue-line.png" alt="Blue line">
             <div class="icons-wrapper d-flex">
                 <div class="icon d-flex">
-                    <img class="icon-img" src="images/src/present-box.png" alt="Present box image">
+                    <img class="icon-img" src="images/src/present-box.png" alt="Present box">
                     <p class="icon-p fz12 fw400 c-gray">Անվաճար առաքում Երևան քաղաքում:</p>
                 </div>
                 <div class="icon d-flex">
-                    <img class="icon-img" src="images/src/delivery-car.png" alt="Delivery car iamge">
+                    <img class="icon-img" src="images/src/delivery-car.png" alt="Delivery car">
                     <p class="icon-p fz12 fw400 c-gray">3 և ավելի ամիսների բաժանորդագրություն գնելու դեպքում գործում է 15% զեղչ:</p>
                 </div>
             </div>
         </div>    
-        <div class="details-value-wrapper d-flex">
+        <div class="subscribe-modal-body d-flex">
             <div class="details bg-blue">
                 <div class="details-container">
-                    <div class="details-titel-btn-wrapper d-flex">
+                    <div class="details-title-btn-wrapper d-flex">
                         <h4 class="details-title fz16 fw700 c-white">Երեխայի տվյալները</h4>
-                        <div class="btn-text-wrapper d-flex">
+                        <button class="plus-btn d-flex">
                             <p class="btn-text fz14 fw400 c-white">Ավելացնել տուփ</p>
-                            <button class="plus-btn">
-                                <img class="plus-img" src="images/src/plus+.png" alt="Plus image">
-                            </button>
+                            <img class="plus-img" src="images/src/plus+.png" alt="Plus image">
+                        </button>
                         </div>
                     </div>
                     <div class="form-wrapper">
@@ -69,14 +68,12 @@
                             </div>
                         </form>
                     </div>
-                    <div class="btn-mobile">
-                        <div class="btn-text-wrapper-mobile d-flex">
+                    <!-- <div class="btn-mobile"> -->
+                        <button class="plus-btn mobile d-flex">
                             <p class="btn-text fz14 fw400 c-white">Ավելացնել տուփ</p>
-                            <button class="plus-btn">
-                                <img class="plus-img" src="images/src/plus+.png" alt="Plus image">
-                            </button>
-                        </div>
-                    </div>
+                            <img class="plus-img" src="images/src/plus+.png" alt="Plus image">
+                        </button>
+                    <!-- </div> -->
                     <h4 class="details-title details-title-2 fz16 fw700 c-white">Կոնտակտային տվայլներ</h4>
                     <div class="form-wrapper">
                         <form class="form d-flex">
@@ -100,34 +97,34 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="value">
-                <div class="value-container bg-white">
-                    <div class="price-wrapper d-flex">
-                        <p class="paragraph fz14 fw300 c-gray">Արժեքը՝</p>
-                        <p class="paragraph fz14 fw300 c-gray">0.000 դր․</p>
-                    </div>
-                    <div class="sale-wrapper d-flex">
-                        <p class="paragraph fz14 fw300 c-gray">Զեղջ՝ <span class="sale-span c-orange"> (0.00 %)</span></p>
-                        <p class="paragraph fz14 fw300 c-gray">0.000 դր․</p>
-                    </div>
-                    <div class="gray-line bg-grayLight"></div>
-                    <div class="total-wrapper d-flex">
-                        <p class="paragraph fz14 fw600 c-gray">Ընդամենը՝</p>
-                        <p class="paragraph fz20 fw600 c-orange">0.000 դր․</p>
-                    </div>
-                    <p class="choice-p fz14 fw400 c-black">Ընտրել վճարման եղանակը՝</p>
-                    <div class="payment-option d-flex">
-                        <div class="card-wrapper d-flex">
-                            <input class="payment-input" id="card" type="radio" name="payment">
-                            <label for="card" class="payment-label fz14 fw400 c-gray">Քարտային</label>
+                <div class="value">
+                    <div class="value-container bg-white">
+                        <div class="price-wrapper d-flex">
+                            <p class="paragraph fz14 fw300 c-gray">Արժեքը՝</p>
+                            <p class="paragraph fz14 fw300 c-gray">0.000 դր․</p>
                         </div>
-                        <div class="cash-wrapper d-flex">
-                            <input class="payment-input" id="cash" type="radio" name="payment">
-                            <label for="cash" class="payment-label fz14 fw400 c-gray">Կանխիկ</label>
+                        <div class="sale-wrapper d-flex">
+                            <p class="paragraph fz14 fw300 c-gray">Զեղջ՝ <span class="sale-span c-orange"> (0.00 %)</span></p>
+                            <p class="paragraph fz14 fw300 c-gray">0.000 դր․</p>
                         </div>
+                        <div class="gray-line bg-grayLight"></div>
+                        <div class="total-wrapper d-flex">
+                            <p class="paragraph fz14 fw600 c-gray">Ընդամենը՝</p>
+                            <p class="paragraph fz20 fw600 c-orange">0.000 դր․</p>
+                        </div>
+                        <p class="choice-p fz14 fw400 c-black">Ընտրել վճարման եղանակը՝</p>
+                        <div class="payment-option d-flex">
+                            <div class="card-wrapper d-flex">
+                                <input class="payment-input" id="card" type="radio" name="payment">
+                                <label for="card" class="payment-label fz14 fw400 c-gray">Քարտային</label>
+                            </div>
+                            <div class="cash-wrapper d-flex">
+                                <input class="payment-input" id="cash" type="radio" name="payment">
+                                <label for="cash" class="payment-label fz14 fw400 c-gray">Կանխիկ</label>
+                            </div>
+                        </div>
+                        <button class="btn fz14 fw800 c-white bg-orange">ՎՃԱՐԵԼ</button>
                     </div>
-                    <button class="btn fz14 fw800 c-white bg-orange">ՎՃԱՐԵԼ</button>
                 </div>
             </div>
         </div>
