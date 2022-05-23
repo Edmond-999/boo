@@ -22,7 +22,7 @@
         border: none
         background-color: transparent
         cursor: pointer
-    .close-btn
+    .close-icon
         max-width: 24px
         &:hover
             opacity: 0.8
@@ -34,9 +34,12 @@
         border: none
     .input
         min-width: 304px
-        &.show
+    .input-wrapper
+        &.show .input
             border: 1px solid var(--orange)
             outline: none
+        &.show .message
+            display: block
     .label
         margin: 0 0 4px 12px
         display: block
@@ -50,8 +53,6 @@
     .message
         display: none
         margin: 6px 0 0 12px
-        &.show
-            display: block
     .popup-footer
         padding: 24px
     .btn
@@ -68,7 +69,7 @@
         .popup-title
             font-weight: 700
             @include fontSize(16)
-        .close-btn
+        .close-icon
             max-width: 20px
         .popup-body
             padding: 15px 24px 36px
