@@ -1,0 +1,218 @@
+.gift-box
+    padding: 23px 0 0 0
+    .title-btn-wrapper
+        padding: 24px 0
+        align-items: center
+        justify-content: space-between
+    .close-btn
+        border: none
+        background-color: transparent
+    .close-icon
+        max-width: 24px
+    .gift-box-blue-line
+        height: 4px
+        margin-left: -52px
+    .icons-wrapper
+        gap: 126px
+        margin: 40px 0 40px 28px
+    .icon
+        align-items: center
+        gap: 24px
+    .icon-img
+        max-width: 44px
+    .icon-p
+        max-width: 286px
+        line-height: 1.5
+    .details-value-wrapper
+        justify-content: center
+    .details
+        width: 64.5%
+        padding: 72px 64px 60px 64px
+    .details-titel-btn-wrapper
+        justify-content: space-between
+        align-items: center
+        margin-bottom: 20px
+    .btn-text-wrapper
+        align-items: center
+        gap: 10px
+    .plus-btn
+        border: none
+        background-color: transparent
+        height: 25px
+        cursor: pointer
+    .plus-img
+        max-width: 25px
+    .form-wrapper
+        background-color: rgba(255,255,255,0.2)
+        padding: 20px 24px 44px 24px
+        border-radius: 12px
+    .form
+        gap: 16px
+        justify-content: space-between
+    .label
+        display: block
+        margin-left: 14px
+    .input-wrapper
+        width: 30% 
+        flex-grow: 1 
+        &.show .input
+            border: 1px solid var(--orange)
+            outline: none
+        &.show .message
+            display: block
+    .input
+        width: 100%
+        border: none
+        border-radius: 24px
+        padding: 10px 14px
+        height: 40px
+        margin-top: 10px 
+        outline-color: var(--black)
+    .message
+        margin: 10px 0 0 12px
+        display: none
+        &.show
+            display: block
+    .btn-mobile
+        display: none
+        margin-top: 22px
+    .btn-text-wrapper-mobile
+        align-items: center
+        gap: 10px
+    .details-title-2
+        margin: 40px 0 20px 0
+    .contact-wrapper
+        margin-top: 144px
+        align-items: center
+        justify-content: space-between
+    .phone-wrapper
+        align-items: center
+        gap: 4px
+    .phone-icon
+        max-width: 20px
+    .value
+        width: 35.5%
+        .label
+            margin-left: 0
+        .btn
+            margin-top: 27px
+            width: 100%
+            padding: 11.5px
+    .value-container
+        box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.08)
+        border-radius: 16px
+        margin: 75px 64px 0 32px
+        padding: 64px 80px
+    .price-wrapper, .sale-wrapper, .total-wrapper
+        justify-content: space-between
+    .sale-wrapper
+        margin: 20px 0 21px 0
+    .gray-line
+        height: 1px
+    .total-wrapper
+        margin: 20px 0 56px 0
+    .choice-p
+        text-align: center
+        margin-bottom: 22px
+    .payment-option
+        justify-content: space-between
+    .card-wrapper, .cash-wrapper
+        align-items: center
+        gap: 8px
+    .payment-input
+        -webkit-appearance: none
+        -moz-appearance: none
+        -ms-appearance: none
+        appearance: none
+        display: inline-block
+        vertical-align: middle
+        border: 2px solid #555
+        border-radius: 10px
+        width: 16px
+        height: 16px
+        outline: none
+        padding: 4px
+    .payment-input:checked
+        background: #555
+        background-clip: content-box
+    
+
+@media screen and (max-width: 1366px)
+    .gift-box
+        .details-value-wrapper
+            flex-direction: column
+        .details
+            width: 100%
+        .value
+            width: 100%
+        .value-container
+            width: 70%
+            margin: 75px auto 50px auto
+
+@media screen and (max-width: 992px)
+    .gift-box
+        .gift-box-blue-line
+            height: 2px
+            margin-left: 0
+        .icons-wrapper
+            gap: 40px
+        .details
+            padding: 39px 24px 24px 24px
+
+
+@media screen and (max-width: 768px)
+    .gift-box
+        padding: 14px 0 0 0
+        .title-btn-wrapper
+            padding: 14px 0
+        .title
+            @include fontSize(18)
+        .close-btn
+            display: none
+        .icons-wrapper
+            flex-direction: column
+            gap: 20px
+            margin: 17px 0
+        .icon-img
+            max-width: 35px
+        .details-title
+            @include fontSize(14)
+        .btn-text-wrapper
+            display: none
+        .form-wrapper
+            background-color: rgba(255,255,255,0.2)
+            padding: 19px 24px 40px 24px
+        .form
+            flex-direction: column
+            gap: 19px
+        .label
+            margin-left: 12px
+        .input-wrapper
+            width: 100% 
+        .btn-mobile
+            display: block
+        .details-title-2
+            margin: 45px 0 20px 0
+        .tel-span
+            display: none
+        .contact-wrapper
+            display: none
+        .value
+            padding: 24px 24px 33px 24px
+            .btn
+                margin-top: 18px
+        .value-container
+            width: 100%
+            margin: 0
+            padding: 28px
+        .sale-wrapper
+            margin: 14px 0 15px 0
+        .total-wrapper
+            margin: 20px 0 46px 0
+    
+@media screen and (max-width: 340px)
+    .gift-box
+        .form-wrapper
+            padding: 19px 15px 40px 15px
+        .value-container
+            padding: 28px 15px 
